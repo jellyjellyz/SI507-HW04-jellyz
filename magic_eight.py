@@ -2,9 +2,7 @@
 import random
 
 def get_user_input():
-    return input("What is your question?")
-
-answer = get_user_input()
+	return input("What is your question?")
 
 def get_answer():
     Possible_Answer = [ "It is certain",
@@ -28,6 +26,25 @@ def get_answer():
                     "Outlook not so good",
                     "Very doubtful"]
 
-    print(random.choice(Possible_Answer))
+    return random.choice(Possible_Answer)
 
-possible = get_answer()
+def magic_8():
+	check = True
+	while check:
+		answer = get_user_input()
+		answer.strip()
+		if answer[-1]=='?':
+			print(get_answer())
+			if input("Do you want to quit? type in quit.").lower() == "quit":
+				check = False
+
+			else:
+				check = True
+
+		else:
+			print("I’m sorry, I can only answer questions.")
+			check = True
+	
+
+magic_8()
+
