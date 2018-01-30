@@ -18,6 +18,9 @@ def magic_8():
 			else:
 				check = True
 
+		else:
+			print("I’m sorry, I can only answer questions.")
+			check = True
 	
 
 magic_8()
